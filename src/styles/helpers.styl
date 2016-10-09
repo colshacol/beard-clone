@@ -1,0 +1,90 @@
+isRow(justify, align) {
+  if justify == start {
+    j-value = flex-start
+  } else if justify == end {
+    j-value = flex-end
+  } else if justify == around {
+    j-value = space-around
+  } else if justify == between {
+    j-value = space-between
+  } else {
+    j-value = justify
+  }
+
+  if align == start {
+    a-value = flex-start
+  } else if align == end {
+    a-value = flex-end
+  } else {
+    a-value = align
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: j-value;
+  align-items: a-value;
+}
+
+
+isColumn(align, justify) {
+  if justify == start {
+    j-value = flex-start
+  } else if justify == end {
+    j-value = flex-end
+  } else if justify == around {
+    j-value = space-around
+  } else if justify == between {
+    j-value = space-between
+  } else {
+    j-value = justify
+  }
+
+  if align == start {
+    a-value = flex-start
+  } else if align == end {
+    a-value = flex-end
+  } else {
+    a-value = align
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: j-value;
+  align-items: a-value;
+}
+
+wraps() {
+  flex-wrap wrap
+}
+
+doesntWrap() {
+  flex-wrap nowrap
+}
+
+spans(number) {
+  amount = percentage(100% / number)
+  flex-basis: amount;
+  max-width: amount;
+  width: amount;
+}
+
+isOffset(direction, number) {
+  amount = percentage(100% / number)
+  if direction == left {
+    margin-left: amount
+  } else if direction == right {
+    margin-right: amount
+  }
+}
+
+isContained(max-width, width) {
+  max-width: max-width;
+  if width {
+    width: width;
+  }
+}
+
+isCentered() {
+  margin-left auto
+  margin-right auto
+}

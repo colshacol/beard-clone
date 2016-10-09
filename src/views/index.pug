@@ -1,0 +1,45 @@
+html
+  head
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    link(href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700|Permanent+Marker|Architects+Daughter", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Bangers", rel="stylesheet")
+    link(rel="stylesheet", href="./css/index.css")
+    title Hipper
+  body
+    include ./components/header
+    
+    - var tableItems = [{image: './img/1.jpg',title: 'No Logs what-so-ever.',text: `We're dead serious about this. We don't store any logs of your online activity. So if push comes to shove and governments ask us to hand over logs of our users, we just tell them “sorry folks, can't help you cause we don't keep logs”. It's that simple.`,},{image: './img/2.jpg',title: 'Bypass Internet Censorship',text: `Internet Censorship? Not on our watch! With Anonymous VPN no government of no country will tell you what you can do, say or see when surfing the net. We're putting the power back in our hands to roam freely where ever your internet heart desires.`,},{image: './img/3.jpg',title: 'Blazing speed',text: `Our dream has always been to create a VPN service that you can use without ever knowing that it's there, working, protecting your online activity. Dreams do come true at times and we were able to accomplish this with cutting edge hardware and software we custom built for Anonymous VPN – Try it out and see for yourself.`,},{image: './img/4.jpg',title: 'Feel the simplicity',text: `Straightforward and easy to use, Anonymous VPN is as simple as it gets! We custom built it to be simple and intuitive so even Dude's (our mascot) grandma can use it! So check it out and see for yourself!`,},{image: './img/5.jpg',title: 'Unlimited Bandwidth',text: `We're here to make sure you can download, stream, watch and do whatever you want with Anonymous VPN quickly and easily in the best qualities. Let us worry about bandwidth, you worry about nothing at all.`,},{image: './img/6.jpg',title: 'Secure',text: `We use strong industry standard encryption to ensure that your traffic cannot be intercepted at the access point or ISP level.`}]
+
+    main
+      .heading
+        h3 WE DO THINGS LIKE COOL PEOPLE.
+    
+      #table
+        each item in tableItems
+          .item
+            .left: img(src=item.image)
+            .right
+              h4 #{item.title}
+              p #{item.text}
+      
+      #plans: .container
+        .heading
+          h3 CHOOSE A PLAN:
+        #plan-holder
+          .plan
+            h2.price $2
+            p.description 3 Day Trial#[br]#[span AWESOME]
+            button BUY NOW
+          .plan
+            h2.price $12
+            p.description Monthly#[br]Subscription
+            button BUY NOW
+          .plan
+            h2.price $69
+            p.description Yearly#[br]Subscription
+            button BUY NOW
+
+    include ./components/footer
+
+
+    script(src="./js/header.js")

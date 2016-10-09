@@ -1,0 +1,48 @@
+@import 'reset'
+@import 'helpers'
+
+html, body, div, section, aside, header, footer, nav, ul,
+li, ol, nav, button, input, textarea, form, a, p, img,
+strong, em, select, radio, fieldset, legend, progress,
+input, main, figure, figcaption,  {
+  border-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  background: white;
+  letter-spacing: 1px;
+  --brown-0: #401F07;
+  --brown-1: rgba(148,125,94,1);
+  --tan-0: #F0E8DE;
+  --font-0: 'PT Sans', sans-serif;
+  --font-bangers: 'Bangers', cursive;
+  --font-marker: 'Permanent Marker', cursive;
+  --font-architect: 'Architects Daughter', cursive;
+  font: 400 62.5%/1.5 var(--font-0);
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@import 'type'
+
+a:hover {
+  color: white;
+}
+
+div, section, aside, header, nav, footer, main, figure {
+  display: flex;
+}
+
+infoBox() {
+  border: 1px dashed rgba(64,31,7,0.5);
+  background: rgba(255,255,255,0.1);
+}
+
+@import 'header'
+@import 'navbar'
+@import 'home'
+@import 'footer'

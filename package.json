@@ -1,0 +1,13 @@
+{
+  "name": "hipper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pug -w ./src/views/index.pug -P -o ./ & stylus -w ./src/styles/index.styl -o ./css & live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

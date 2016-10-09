@@ -1,0 +1,41 @@
+nav {
+  width: 100%;
+}
+
+nav > .container {
+  isContained(992px, 100%)
+  isCentered()
+  padding-top: 10px;
+}
+
+nav ul {
+  isRow(center, center);
+  isCentered();
+  color: white;
+  font-size: 1.4rem;
+}
+
+nav ul li {
+  display: inline;
+  line-height: 50px;
+  margin: 0 10px;
+  &:nth-of-type(2n+0) {
+    margin: 0;
+  }
+}
+
+nav ul li a {
+  color: #F0E8DE;
+  font-weight: bold;
+}
+
+nav ul li:first-of-type,
+nav ul li:last-of-type {
+  width: 40px;
+  height: 2px;
+  margin: 0 20px;
+  background: #F0E8DE;
+  @media screen and (max-width: 499px) {
+    width: 2px;
+  }
+}

@@ -1,0 +1,143 @@
+main {
+  z-index: 49;
+  width: 100%;
+  padding-top: 400px;
+  background-color: transparent;
+  isColumn(center, start)
+}
+
+.heading {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.heading h3 {
+  font: 4.8rem/1.5 var(--font-bangers);
+  isCentered();
+}
+
+#table {
+  width: 95%;
+  isRow(center, start)
+  isCentered()
+  wraps()
+  padding-bottom: 50px;
+}
+
+#table .item {
+  isRow(between, start)
+  width: 42%;
+  margin: 0 15px 25px;
+  padding: 25px 30px;
+  border: 1px solid white;
+  transition: all 0.75s;
+  @media screen and (max-width: 992px) {
+    width: 90%;
+    margin: 20px;
+    &:hover {
+      border: 1px solid var(--tan-0);
+      transform: scale(1.1)
+    }
+  }
+}
+
+#table .item .left {
+  align-items: center;
+}
+
+#table .item .left img {
+  margin-top: 15px;
+}
+
+#table .item .right {
+  margin-left: 25px;
+  isColumn(start, start);
+  h4 {
+    margin-top: 0;
+  }
+  h4, p {
+    text-align: left;
+  }
+}
+
+
+#plans {
+  background: #947d5e;
+  width: 100%;
+  padding: 50px 0;
+}
+
+#plans .container {
+  isColumn(center, center);
+  isContained(992px, 100%);
+  isCentered();
+}
+
+#plans .heading {
+  isContained(992px, 90%)
+  isCentered();
+  isColumn(center, start);
+  color: white;
+}
+
+#plans #plan-holder {
+  isContained(1024px, 90%)
+  isCentered();
+  isColumn(center, start);
+  @media screen and (min-width: 768px) {
+    isRow(around, center);
+  }
+}
+
+#plans .plan {
+  isColumn(center, center);
+  padding: 25px;
+  color: white;
+  height: 298px;
+  width: 95%;
+  margin-bottom: 25px;
+  border: 1px dashed rgba(64,31,7,0.5);
+  background: rgba(255,255,255,0.1);
+  transition: all 0.75s;
+
+  @media screen and (min-width: 768px) {
+    width: 29%;
+  }
+
+  &:first-of-type p span {
+    color: var(--tan-0);
+    opacity: 0.5
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+#plans .plan h2 {
+  font-family: var(--font-bangers);
+  letter-spacing: 3px;
+  text-shadow: 2px 2px rgba(64,31,7,0.5);
+}
+#plans .plan p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#plans .plan button {
+  background: #7d5d3b;
+  font-size: 1.7rem;
+  padding: 6px 24px;
+  color: white;
+  border: 1px solid #54381e;
+  background: linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+  box-shadow: inset 0px 1px 0px 0px #a6827e;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+#plans .plan a {
+  color: white;
+  &:hover {
+    color: white;
+  }
+}

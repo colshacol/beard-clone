@@ -1,0 +1,17 @@
+- var links = ['PRICING', 'NETWORK', 'FAQ', 'CONTACT']
+
+nav: .container
+  ul
+    li
+    each link, i in links
+      if i == links[0]
+        li
+        li: a(href="##{link}") #{link}
+
+      else
+        li: a(href="##{link}") #{link}
+
+      if links[i] != links[links.length - 1]
+        li |
+    li
+    

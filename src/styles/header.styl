@@ -1,0 +1,160 @@
+
+header {
+  --invisi-tan: rgba(148,125,94,1);
+  background: var(--brown-0);
+  color: white;
+  width: 100%;
+  height: 600px;
+  max-height: 100vh;
+  overflow: hidden;
+  z-index: -5;
+}
+
+header #gradient-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(190deg, var(--invisi-tan), var(--brown-0));
+}
+
+header .g2 {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: linear-gradient(190deg, rgba(0,0,0,0), var(--brown-0));
+}
+
+header .container {
+  isColumn(center, start)
+  isContained(992px, 100%);
+  isCentered();
+}
+
+#headers {
+  isColumn(center, center);
+  isCentered();
+  position: absolute;
+  top: 70px;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+#headers h1, #headers h4 { z-index: 1 }
+
+#headers h1 {
+  font: 700 9rem/1.5 var(--font-bangers);
+  width: 100%;
+  letter-spacing: 3px;
+  transform: rotate(-3deg);
+  color: var(--tan-0);
+  position: fixed;
+  top: 70px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#headers .display-small {
+  display: none;
+}
+
+#headers h4 {
+  font: 700 5rem var(--font-marker);
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 135px;
+  left: 150px;
+  color: var(--brown-0);
+  text-shadow: 2px 2px 0 var(--invisi-tan);
+  transform: rotate(-1deg);
+  @media screen and (max-width: 699px) {
+    font-size: 4.2rem;
+    left: 130px;
+  }
+
+  @media screen and (max-width: 599px) {
+    font-size: 4.6rem;
+    transform: rotate(-2deg);
+    top: 140px;
+    left: 75px;
+  }
+
+  @media screen and (max-width: 489px) {
+    font-size: 3.4rem;
+    transform: rotate(-3deg);
+    top: 125px;
+    left: 60px;
+  }
+}
+
+header #mascot {
+  position: absolute;
+  top: 250;
+  width: 100%;
+  z-index: 99;
+}
+
+header #mascot img {
+  isCentered()
+}
+
+// header h3 {
+//   font: 700 3rem var(--font-architect);
+//   position: fixed;
+//   top: -145px;
+//   right: 185px;
+//   opacity: 0.75;
+//   transform: rotate(-3deg);
+// }
+
+#login-floater {
+  position: fixed;
+  top: 0;
+  left: 25px;
+  font-size: 1.2rem;
+  background: var(--brown-1);
+  padding: 5px 10px;
+  border-radius: 0 0 6px 6px;
+  isRow(center, center)
+}
+
+#login-floater img {
+  height: 14px;
+  margin-right: 5px;
+}
+
+#login-floater p span {
+  @media screen and (max-width: 949px) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  #login-floater {
+    display: none;
+  }
+  #headers h1 {
+    font-size: 8.2rem;
+  }
+  #headers h4 {
+    font-size: 4.4rem;
+    left: 
+  }
+}
+
+@media screen and (max-width: 599px) {
+  header #headers {
+    top: 75px;
+  }
+  header #headers h1:not(.display-small) {
+    display: none;
+  }
+  header #headers h1.display-small {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 489px) {
+  #headers h1.display-small {
+    font-size: 7.2rem;
+  }
+}
