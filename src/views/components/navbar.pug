@@ -6,10 +6,10 @@ nav: .container
     each link, i in links
       if i == links[0]
         li
-        li: a(href="##{link}") #{link}
+        li: a #{link}
 
       else
-        li: a(href="##{link}") #{link}
+        li: a #{link}
 
       if links[i] != links[links.length - 1]
         li |
